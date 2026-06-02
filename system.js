@@ -1,5 +1,5 @@
 /**
- * AI Progress Housing System - Capstone Wizard Script
+ * AI-Powered Residential Housing Planning and Estimation System - Capstone Wizard Script
  * driving location hazard auditing (Phase 1), house recommendation cards (Phase 2),
  * blueprint specs (Phase 3), cost computation with 2-worker default scheduler (Phase 4),
  * price forecasting (Phase 5), GIS risk details (Phase 6), and printable reports (Phase 7).
