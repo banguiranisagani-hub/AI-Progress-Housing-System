@@ -20,9 +20,10 @@
     <!-- Redirect to Dashboard on first open -->
     <script>
         // If the user hasn't visited the Dashboard in this session, redirect them there first.
+        // The Dashboard (system.html) sets a flag so we know they came from there.
         if (!sessionStorage.getItem('visitedDashboard')) {
             sessionStorage.setItem('redirectedFrom', 'index');
-            window.location.replace('/');
+            window.location.replace('system.html');
         }
     </script>
 </head>
@@ -36,8 +37,8 @@
                 <span>AI Progress Housing System</span>
             </div>
             <div class="nav-links">
-                <a href="/" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
-                <a href="/custom" class="nav-link active"><i class="fa-solid fa-drafting-compass"></i> Custom Build</a>
+                <a href="system.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="index.html" class="nav-link active"><i class="fa-solid fa-drafting-compass"></i> Custom Build</a>
             </div>
         </div>
     </nav>
@@ -816,7 +817,7 @@
             </ul>
             <p class="disclaimer-note">If you're looking for AI-recommended designs and guided planning, please visit the <strong>Dashboard</strong> instead.</p>
             <div class="disclaimer-modal-actions">
-                <a href="/" class="disclaimer-back-btn"><i class="fa-solid fa-arrow-left"></i> Go to Dashboard</a>
+                <a href="system.html" class="disclaimer-back-btn"><i class="fa-solid fa-arrow-left"></i> Go to Dashboard</a>
                 <button type="button" id="disclaimerProceedBtn" class="disclaimer-proceed-btn"><i class="fa-solid fa-arrow-right"></i> Proceed to Custom Build</button>
             </div>
         </div>
