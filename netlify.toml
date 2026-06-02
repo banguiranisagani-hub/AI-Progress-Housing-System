@@ -1,0 +1,39 @@
+[build]
+  publish = "."
+
+# Security headers to prevent directory listing
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Custom 404 page - redirect unknown pages to Dashboard
+[[redirects]]
+  from = "/system.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/custom"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/system.html"
+  status = 200
+
+[[redirects]]
+  from = "/custom"
+  to = "/index.html"
+  status = 200
+
+# Catch-all: send unknown paths to dashboard
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301

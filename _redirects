@@ -1,0 +1,12 @@
+# ============================================================
+# Netlify URL Rewrites & Redirect Rules
+# AI Progress Housing System
+# ============================================================
+
+# Block direct access to raw .html files — redirect them to clean URLs
+/system.html          /          301
+/index.html           /custom    301
+
+# Rewrite clean URLs to actual files (200 = silent rewrite, URL stays clean)
+/                     /system.html    200
+/custom               /index.html     200
